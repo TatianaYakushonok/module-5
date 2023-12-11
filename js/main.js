@@ -2,37 +2,22 @@
 
 const ads = document.querySelector('.ads');
 const items = document.querySelector('.items');
-const itemOne = document.querySelector('.item_one');
-const itemTwo = document.querySelector('.item_two');
-const itemThree = document.querySelector('.item_three');
-const itemFour = document.querySelector('.item_four');
-const itemFive = document.querySelector('.item_five');
-const itemSix = document.querySelector('.item_six');
-
-const itemFourList = itemFour.querySelector('.props__list');
-const itemTwoList = itemTwo.querySelector('.props__list');
-const itemSixList = itemSix.querySelector('.props__list');
-const itemFiveList = itemFive.querySelector('.props__list');
-const itemThreeList = itemThree.querySelector('.props__list');
-
-const propsItemFour = itemFourList.querySelector(
-  '.props__item_four:nth-child(3)',
-);
-const propsItemTwo = itemTwo.querySelector('.props__item_four');
-const propsItemSix = itemSix.querySelectorAll('.props__item_two');
-
-const itemFiveTitle = itemFive.querySelector('h2');
-const itemTwoTitle = itemTwo.querySelector('h2');
-const itemSixTitle = itemSix.querySelector('h2');
-const itemThreeTitle = itemThree.querySelector('h2');
+const item = document.querySelectorAll('.item');
+const content = document.querySelectorAll('.content');
+const propsList = document.querySelectorAll('.props__list');
+const propsItem = document.querySelectorAll('.props__item');
+const propsItemTwo = document.querySelectorAll('.props__item_two');
+const itemTitle = document.querySelectorAll('.item__title');
 
 ads.remove();
-items.append(itemOne, itemTwo, itemThree, itemFour, itemFive, itemSix);
-propsItemFour.after(propsItemTwo);
-itemTwoList.before(itemFiveTitle);
-itemSixList.before(itemTwoTitle);
-itemFiveList.before(itemSixTitle);
-itemThreeTitle.textContent = 'This и прототипы объектов';
-itemThreeTitle.after(itemFiveList);
-itemSixTitle.after(itemThreeList);
-Array.from(propsItemSix).map((item) => itemTwoList.append(item));
+items.append(item[1], item[2], item[3], item[0], item[4], item[5]);
+content[4].append(itemTitle[4]);
+propsItem[2].after(propsItem[14]);
+propsList[2].before(itemTitle[3]);
+propsList[5].before(itemTitle[1]);
+itemTitle[2].textContent = 'This и прототипы объектов';
+itemTitle[2].after(propsList[4]);
+itemTitle[4].after(propsList[3]);
+Array.from(propsItemTwo).map((item, i) => {
+  if (i === 8 || i === 9) propsList[2].append(item);
+});
