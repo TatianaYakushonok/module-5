@@ -11,13 +11,12 @@ const itemTitle = document.querySelectorAll('.item__title');
 
 ads.remove();
 items.append(item[1], item[2], item[3], item[0], item[4], item[5]);
-content[4].append(itemTitle[4]);
+content[4].append(itemTitle[4], propsList[3]);
 propsItem[2].after(propsItem[14]);
 propsList[2].before(itemTitle[3]);
 propsList[5].before(itemTitle[1]);
 itemTitle[2].textContent = 'This и прототипы объектов';
 itemTitle[2].after(propsList[4]);
-itemTitle[4].after(propsList[3]);
 Array.from(propsItemTwo).map((item, i) => {
   if (i === 8 || i === 9) propsList[2].append(item);
 });
