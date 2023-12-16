@@ -30,10 +30,11 @@ const createListItem = (str) => {
 
 const createElement = () => {
   const ul = document.querySelector('.list');
-  const str = addStr();
+  let str = addStr();
   const checkStr = checkingString(ul, str);
 
   if (checkStr && str) {
+    str = str.trim();
     const li = createListItem(str);
     ul.append(li);
   }
